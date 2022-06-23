@@ -45,9 +45,13 @@ function renderMeal(mealObj){
       mealDiv.setAttribute("id", "meal-display")
       mealDiv.innerHTML = `<img src = "${imgUrl}"/>
                         <h3>${meals}</h3>
+                        <p><strong> Category:</strong>${category}</p>
                         <h3> ingredients</h3>
-                        <p>${ingredients}</p>
-                    
+                        <ul> 
+                        ${ingredients.map(ingredient =>`
+                        <li> ${ingredient}</li>`
+                            )}
+                        </ul>
                         <h3> Instructions </h3>
                         <p> ${par}</p>`
                         
