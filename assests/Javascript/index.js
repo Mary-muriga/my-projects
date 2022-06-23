@@ -32,6 +32,7 @@ function renderMeal(mealObj){
       let category = mealObj.meals[0].strCategory
       let imgUrl = mealObj.meals[0].strMealThumb
       let par = mealObj.meals[0].strInstructions
+      let video = mealObj.meals[0].strSource
       //let ingredients = mealObj.meals[0].strIngredient1
       //let ingredients1 = mealObj.meals[0].strIngredient2
       //let ingredients2 = mealObj.meals[0].strIngredient3
@@ -45,15 +46,22 @@ function renderMeal(mealObj){
       mealDiv.setAttribute("id", "meal-display")
       mealDiv.innerHTML = `<img src = "${imgUrl}"/>
                         <h3>${meals}</h3>
-                        <p><strong> Category:</strong>${category}</p>
-                        <h3> ingredients</h3>
+                        <h3>Category:${category}</h3>
+                        <h3>Ingredients</h3>
                         <ul> 
                         ${ingredients.map(ingredient =>`
                         <li> ${ingredient}</li>`
                             )}
                         </ul>
                         <h3> Instructions </h3>
-                        <p> ${par}</p>`
+                        <p> ${par}</p>
+                        <div class= "row">
+                               <h3>Video Recipe</h3>
+                             <div class ="videoWrapper">
+                                   <iframe
+                                   src="https://www.youtube.com/embed/${video.slice(-11)}"/>
+                             </div>
+                        </div>`
                         
                                
                     
