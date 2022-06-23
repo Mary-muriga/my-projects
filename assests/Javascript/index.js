@@ -26,7 +26,7 @@ function renderMeal(mealObj){
         }
     }
 
-    console.log(ingredients);
+    //console.log(ingredients);
 
       let meals = mealObj.meals[0].strMeal
       let category = mealObj.meals[0].strCategory
