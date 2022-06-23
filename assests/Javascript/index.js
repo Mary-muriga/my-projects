@@ -32,7 +32,7 @@ function renderMeal(mealObj){
       let category = mealObj.meals[0].strCategory
       let imgUrl = mealObj.meals[0].strMealThumb
       let par = mealObj.meals[0].strInstructions
-      let video = mealObj.meals[0].strSource
+      //let video = mealObj.meals[0].strSource
       //let ingredients = mealObj.meals[0].strIngredient1
       //let ingredients1 = mealObj.meals[0].strIngredient2
       //let ingredients2 = mealObj.meals[0].strIngredient3
@@ -45,23 +45,16 @@ function renderMeal(mealObj){
       let mealDiv = document.createElement('div')
       mealDiv.setAttribute("id", "meal-display")
       mealDiv.innerHTML = `<img src = "${imgUrl}"/>
-                        <h3>${meals}</h3>
-                        <h3>Category:${category}</h3>
-                        <h3>Ingredients</h3>
+                            <h3>${meals}</h3>
+                             <h3>Category:${category}</h3>
+                             <h3>Ingredients</h3>
                         <ul> 
-                        ${ingredients.map(ingredient =>`
-                        <li> ${ingredient}</li>`
-                            )}
+                             ${ingredients.map(ingredient =>`
+                                 <li> ${ingredient}</li>`
+                              )}
                         </ul>
-                        <h3> Instructions </h3>
-                        <p> ${par}</p>
-                        <div class= "row">
-                               <h3>Video Recipe</h3>
-                             <div class ="videoWrapper">
-                                   <iframe
-                                   src="https://www.youtube.com/embed/${video.slice(-11)}"/>
-                             </div>
-                        </div>`
+                               <h3> Instructions </h3>
+                               <p> ${par}</p>`
                         
                                
                     
@@ -69,4 +62,8 @@ function renderMeal(mealObj){
     console.log(mealDiv)
     
 }
-
+function addComment(){
+    let n = document.getElementById("comment").value;
+    document.getElementById("display").innerHTML = n;
+}
+document.getElementById("btn").addEventListener("click", addComment);
