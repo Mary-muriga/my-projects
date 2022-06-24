@@ -8,6 +8,7 @@ This is an application made in Javascript and an external API used to display ra
 ---
 # Project setup instruction
 used HTML, CSS, Javascript language and an external API from mealdb to access the meal data. 
+Challenges access some data from the API e.g ingredients
 
 ---
 # live site links on Github
