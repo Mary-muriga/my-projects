@@ -8,6 +8,9 @@ This is an application made in Javascript and an external API used to display ra
 ---
 # Project setup instruction
 
-
+---
 # live site links on Github
+
+---
 # copyright $ license
+copyright all rights reserved.
